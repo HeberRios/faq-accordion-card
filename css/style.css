@@ -113,7 +113,102 @@ h6 {
 /* GENERAL STYLES */
 
 body {
+    min-height: 100dvh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    row-gap: 3rem;
+    grid-template-columns: 1fr;
+
+    background: linear-gradient(
+        to bottom,
+        var(--clr-soft-violet),
+        var(--clr-soft-blue)
+    );
     font-family: var(--ff-regular);
+    padding: 3rem 1.5rem;
+}
+
+/* FAQ-CARD  STYLES */
+
+.faq-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: #fff;
+    padding: 0 1.5rem 2.5rem 1.5rem;
+    border-radius: 1.5rem;
+    margin-top: 7rem;
+}
+
+/* CARD HEADER STYLES */
+
+header.bg-pattern-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+header.bg-pattern-container > picture > img.card-illustration {
+    width: 15rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -60%);
+}
+
+/* FAQ SECTION STYLES */
+
+.faq-card > section {
+    font-size: var(--fs-regular);
+    color: var(--clr-dark-grayish-blue);
+}
+
+.faq-card > section > h1 {
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: var(--fw-bold);
+    color: var(--clr-very-dark-desaturated-blue);
+    line-height: 1;
+    margin-bottom: 2rem;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.faq-container details:nth-child(n) {
+    padding-bottom: 1rem;
+    border-bottom: 0.0625rem solid var(--clr-light-grayish-blue);
+}
+
+details > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8125rem;
+    list-style-type: none;
+}
+
+details[open] > summary {
+    font-weight: var(--fw-bold);
+    color: var(--clr-very-dark-desaturated-blue);
+    padding-bottom: 0.5rem;
+}
+
+details > summary > img {
+    transition: all 0.4s;
+}
+
+details[open] > summary > img {
+    transform: rotate(-180deg);
+}
+details[open] > span {
+    display: inline-block;
+    width: 90%;
 }
 
 /* ATTRIBUTION STYLES */
