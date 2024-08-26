@@ -112,6 +112,10 @@ h6 {
 
 /* GENERAL STYLES */
 
+*:focus {
+    outline: 2px solid var(--clr-soft-red);
+}
+
 body {
     min-height: 100dvh;
     display: grid;
@@ -231,6 +235,19 @@ details[open] > span {
 .attribution a:hover,
 .attribution a:focus {
     color: hsl(228, 99%, 70%);
+}
+
+/* ACTIVE STATES */
+
+details > summary:hover,
+details > summary:focus {
+    color: var(--clr-soft-red);
+    cursor: pointer;
+}
+
+details[open] > summary:hover,
+details[open] > summary:focus {
+    color: var(--clr-very-dark-desaturated-blue);
 }
 
 /* MEDIA QUERIES */
